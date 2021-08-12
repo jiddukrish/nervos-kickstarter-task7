@@ -1,0 +1,105 @@
+body {
+    padding: 20px;
+}
+
+.rotating-icon {
+    display: inline-block;
+    animation: spin 1s infinite linear;
+}
+
+button {
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .create-kickstarter,
+    .show-projects {
+        width: 50vw;
+    }
+
+    .create-kickstarter {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        h4 {
+            margin: 0;
+        }
+        input,
+        textarea {
+            padding: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            // width: 40%;
+            background-color: green;
+            font-weight: bolder;
+            color: white;
+        }
+    }
+
+    .loading {
+        margin-top: 1rem;
+    }
+
+    .show-projects {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .projects {
+            .project {
+                border: 1px solid gray;
+                margin-bottom: 1rem;
+
+                .project-header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.7rem;
+
+                    div {
+                        span {
+                            font-weight: bolder;
+                            border-radius: 5px;
+                            padding: 0.2rem;
+                            background-color: purple;
+                            color: white;
+                        }
+                    }
+                }
+
+                .btn-vote {
+                    margin-left: 40%;
+                    background-color: rgb(219, 219, 219);
+                    font-weight: bolder;
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes twist-up {
+    to {
+        transform: rotateX(360deg);
+    }
+}
